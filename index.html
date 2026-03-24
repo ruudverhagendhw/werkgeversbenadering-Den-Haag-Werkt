@@ -1206,8 +1206,8 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
 <div class="card cen" style="background:linear-gradient(135deg,#f0f4fa,#fff);border-color:var(--blue);"><div style="font-size:18px;font-weight:700;color:var(--dark)">Werkgeversbenadering Den Haag Werkt</div><div class="ts mt" style="max-width:720px;margin:0 auto">De werkgeversbenadering is opgebouwd rond vier strategische pijlers die samen bepalen hoe Den Haag Werkt werkgevers benadert, ondersteunt en ontwikkelt richting inclusief werkgeverschap.</div></div>
 <div class="sec mt2" style="color:var(--blue)">De vier pijlers</div>
 <div class="g2 mb2">
-<div class="card ct" style="border-top-color:var(--blue)"><div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:6px">1. Werkgeverssegmentatie</div><div class="ts">We categoriseren werkgevers op intentie en gedrag via de TNO VIO, zodat we hen gericht en op maat kunnen ondersteunen bij inclusief werkgeverschap. Focus ligt op kansrijke langetermijnpartners met plaatsingspotentieel van minimaal vijf plekken.</div></div>
-<div class="card ct" style="border-top-color:var(--green)"><div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:6px">2. Positionering Sociaal Ondernemers en SROI-verplichte werkgevers</div><div class="ts">Sociaal ondernemers en SROI-verplichte werkgevers krijgen een duidelijke strategische positie. We zorgen voor een sterkere koppeling met reguliere werkgevers en organiseren de samenhang als portfolio.</div></div>
+<div class="card ct" style="border-top-color:var(--blue)"><div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:6px">1. Werkgeverssegmentatie</div><div class="ts">We categoriseren werkgevers op intentie en gedrag met behulp van de TNO VIO, zodat we hen gericht en op maat kunnen ondersteunen bij inclusief werkgeverschap. Focus ligt op kansrijke langetermijnpartners met plaatsingspotentieel van minimaal vijf plekken.</div></div>
+<div class="card ct" style="border-top-color:var(--green)"><div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:6px">2. Positionering Sociaal Ondernemers en SROI-verplichte werkgevers</div><div class="ts">Sociaal ondernemers en SROI-verplichte werkgevers krijgen een duidelijke strategische positie. We zorgen dat de juiste kandidaten naar de juiste type werkgevers worden begeleid en dat er afstemming is tussen deze werkgevers — zodat de keten samenhangt en plaatsingen duurzaam zijn.</div></div>
 <div class="card ct" style="border-top-color:var(--orange)"><div style="font-size:14px;font-weight:700;color:var(--orange);margin-bottom:6px">3. Maatwerkproducten &amp; Diensten</div><div class="ts">We ontwikkelen passende producten en diensten om werkgevers praktisch te ondersteunen en te ontwikkelen in inclusief werkgeverschap. Het aanbod sluit aan op de VIO-uitkomst en het segment van de werkgever.</div></div>
 <div class="card ct" style="border-top-color:var(--gold)"><div style="font-size:14px;font-weight:700;color:#b8860b;margin-bottom:6px">4. Van Matchen naar Adviseren</div><div class="ts">De focus van accountmanagers verschuift van bemiddelen naar adviseren. Matching wordt steeds meer datagedreven, waardoor de accountmanager tijd krijgt voor strategische werkgeversadvisering en het structureel implementeren van inclusie.</div></div>
 </div>
@@ -1249,24 +1249,34 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
 <div class="card mb2" style="background:linear-gradient(135deg,#f8f9fb,#fff)"><div class="cen mb"><div style="font-size:13px;font-weight:700;color:var(--dark)">Het VIO-model: van Willen via Kunnen naar Doen</div></div>
 <div style="display:flex;gap:12px;align-items:stretch">
 <div style="flex:1;background:#e8eef8;border-radius:10px;padding:16px;border:2px dashed var(--blue)"><div style="font-size:14px;font-weight:700;color:var(--blue);margin-bottom:10px;text-align:center">WILLEN</div><div style="font-size:11px;color:var(--tm);text-align:center;margin-bottom:12px">3 factoren &#8594; Intentie</div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;margin-bottom:6px;border-left:3px solid var(--blue-light)"><div style="font-size:12px;font-weight:600;color:var(--blue)">Attitude</div><div class="tx">Houding tegenover inclusief werken</div></div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;margin-bottom:6px;border-left:3px solid var(--blue-light)"><div style="font-size:12px;font-weight:600;color:var(--blue)">Sociale norm</div><div class="tx">Steun of druk vanuit omgeving</div></div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--blue-light)"><div style="font-size:12px;font-weight:600;color:var(--blue)">Eigen-effectiviteit</div><div class="tx">Vertrouwen in eigen kunnen</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;margin-bottom:6px;border-left:3px solid var(--blue-light)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--blue)">Attitude</div><button onclick="openVioPopup('attitude')" style="font-size:10px;background:var(--blue);color:#fff;border:none;padding:2px 7px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">De houding van het bedrijf tegenover het in dienst nemen van mensen met een afstand tot de arbeidsmarkt — bepaald door verwachte voor- en nadelen.</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;margin-bottom:6px;border-left:3px solid var(--blue-light)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--blue)">Sociale norm</div><button onclick="openVioPopup('socialeNorm')" style="font-size:10px;background:var(--blue);color:#fff;border:none;padding:2px 7px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">De druk of steun die een werkgever ervaart vanuit de omgeving om inclusief te ondernemen — van klanten, personeel, gemeente of branche.</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--blue-light)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--blue)">Eigen-effectiviteit</div><button onclick="openVioPopup('eigenEffectiviteit')" style="font-size:10px;background:var(--blue);color:#fff;border:none;padding:2px 7px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">Het vertrouwen van het bedrijf dat het daadwerkelijk in staat is om mensen uit de doelgroep werk te bieden en te begeleiden, ook bij tegenslag.</div></div>
 <div class="cen mt" style="font-size:12px;font-weight:600;color:var(--blue)">&#8594; Intentie</div></div>
 <div style="display:flex;align-items:center;font-size:24px;color:var(--tm)">&#8594;</div>
 <div style="flex:1.3;background:#e8eef8;border-radius:10px;padding:16px;border:2px dashed var(--dark)"><div style="font-size:14px;font-weight:700;color:var(--dark);margin-bottom:10px;text-align:center">KUNNEN</div><div style="font-size:11px;color:var(--tm);text-align:center;margin-bottom:12px">4 factoren &#8594; Gedrag</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
-<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="font-size:12px;font-weight:600;color:var(--dark)">Vaardigheden</div><div class="tx">Kennis van regelingen en processen</div></div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="font-size:12px;font-weight:600;color:var(--dark)">Actieplan</div><div class="tx">Concrete stappen en planning</div></div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="font-size:12px;font-weight:600;color:var(--dark)">Copingplan</div><div class="tx">Omgaan met tegenslagen</div></div>
-<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="font-size:12px;font-weight:600;color:var(--dark)">Belemmeringen</div><div class="tx">Obstakels die in de weg staan</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--dark)">Vaardigheden</div><button onclick="openVioPopup('vaardigheden')" style="font-size:10px;background:var(--dark);color:#fff;border:none;padding:2px 6px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">Kennis van regelingen, samenwerking met externe partijen en het vermogen om kandidaten te begeleiden op de werkvloer.</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--dark)">Actieplan</div><button onclick="openVioPopup('actieplan')" style="font-size:10px;background:var(--dark);color:#fff;border:none;padding:2px 6px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">Concrete, geplande acties met een duidelijke taakverdeling: wie doet wat en wanneer om inclusief werkgeverschap te realiseren.</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--dark)">Copingplan</div><button onclick="openVioPopup('copingplan')" style="font-size:10px;background:var(--dark);color:#fff;border:none;padding:2px 6px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">Concrete afspraken en scenario's voor als er problemen optreden — hoe handelt de organisatie bij uitval, weerstand of andere tegenslagen?</div></div>
+<div style="background:#fff;border-radius:6px;padding:8px 12px;border-left:3px solid var(--dark)"><div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:12px;font-weight:600;color:var(--dark)">Belemmeringen</div><button onclick="openVioPopup('belemmeringen')" style="font-size:10px;background:var(--dark);color:#fff;border:none;padding:2px 6px;border-radius:10px;cursor:pointer;font-family:inherit;font-weight:600;white-space:nowrap;flex-shrink:0">Meer info</button></div><div class="tx">Interne en externe factoren die plaatsing in de weg staan, zoals het ontbreken van vacatures, ongeschikt werk of gebrek aan draagvlak.</div></div>
 </div></div>
 <div style="display:flex;align-items:center;font-size:24px;color:var(--tm)">&#8594;</div>
 <div style="flex:0.6;background:#e8f5e9;border-radius:10px;padding:16px;border:2px solid var(--green);display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:8px">DOEN</div><div style="background:var(--green);color:#fff;border-radius:10px;padding:14px;text-align:center"><div style="font-size:13px;font-weight:700">(Inclusief) Gedrag</div><div style="font-size:11px;margin-top:4px">In dienst nemen en houden</div></div></div>
 </div></div>
 <div class="sec" style="color:var(--dark)">Van score naar aanpak</div>
 <div class="card"><div class="ts">De accountmanager vult de VIO samen met de werkgever in en bespreekt de uitkomst. De drie intentie-factoren samen bepalen het segment. De vier gedragsfactoren bepalen welke concrete producten en diensten worden ingezet. Een werkgever met hoge intentie maar weinig vaardigheden vraagt een compleet andere benadering dan een werkgever die handelt vanuit verplichting.</div>
-<div class="fr mt2"><div class="fi" style="border-color:var(--blue)"><div style="font-size:14px"></div><div class="tx">VIO invullen</div></div><div class="fa">&#8594;</div><div class="fi" style="border-color:var(--blue)"><div style="font-size:14px"></div><div class="tx">Uitkomst bespreken</div></div><div class="fa">&#8594;</div><div class="fi" style="border-color:var(--blue)"><div style="font-size:14px"></div><div class="tx">Segment bepalen</div></div><div class="fa">&#8594;</div><div class="fi" style="border-color:var(--blue)"><div style="font-size:14px"></div><div class="tx">Aanpak op maat</div></div><div class="fa">&#8594;</div><div class="fi" style="border-color:var(--blue)"><div style="font-size:14px"></div><div class="tx">Periodiek herijken</div></div></div></div>
+<div class="fr mt2">
+<div class="fi" style="border-color:var(--blue);cursor:pointer" onclick="openVioPopup('uitsturen')"><div style="font-size:12px;font-weight:700;color:var(--blue)">Stap 1</div><div class="tx">VIO uitsturen</div><div style="font-size:10px;color:var(--blue);margin-top:4px;font-weight:600">Wat is de VIO? →</div></div>
+<div class="fa">&#8594;</div>
+<div class="fi" style="border-color:var(--blue);cursor:pointer" onclick="openVioPopup('bespreken')"><div style="font-size:12px;font-weight:700;color:var(--blue)">Stap 2</div><div class="tx">Uitkomst bespreken</div><div style="font-size:10px;color:var(--blue);margin-top:4px;font-weight:600">Hoe doe je dat? →</div></div>
+<div class="fa">&#8594;</div>
+<div class="fi" style="border-color:var(--blue);cursor:pointer" onclick="openVioPopup('segment')"><div style="font-size:12px;font-weight:700;color:var(--blue)">Stap 3</div><div class="tx">Segment bepalen</div><div style="font-size:10px;color:var(--blue);margin-top:4px;font-weight:600">Welke typen? →</div></div>
+<div class="fa">&#8594;</div>
+<div class="fi" style="border-color:var(--blue);cursor:pointer" onclick="openVioPopup('aanpak')"><div style="font-size:12px;font-weight:700;color:var(--blue)">Stap 4</div><div class="tx">Aanpak op maat</div><div style="font-size:10px;color:var(--blue);margin-top:4px;font-weight:600">Wat is passend? →</div></div>
+<div class="fa">&#8594;</div>
+<div class="fi" style="border-color:var(--blue);cursor:pointer" onclick="openVioPopup('herijken')"><div style="font-size:12px;font-weight:700;color:var(--blue)">Stap 5</div><div class="tx">Periodiek herijken</div><div style="font-size:10px;color:var(--blue);margin-top:4px;font-weight:600">Hoe monitoren? →</div></div>
+</div></div>
 <div style="text-align:center;margin-top:20px;margin-bottom:4px;">
   <button onclick="showPage('toolbox')" style="background:var(--blue);color:#fff;border:none;padding:11px 28px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 2px 8px rgba(68,114,196,.25);" onmouseover="this.style.background='#2d5ca6'" onmouseout="this.style.background='var(--blue)'">📖 Bekijk de VIO Toolbox — handelingsopties per gesprek</button>
 </div>
@@ -1371,12 +1381,119 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
   <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
     <div>
       <div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Welke werkgevers zoeken wij in Den Haag?</div>
-      <div class="tx">Overzicht van de 12 beroepstypen, prioritering per sector en de vier acquisitiemomenten die richting geven aan wanneer en hoe we werkgevers benaderen. Gebaseerd op historische plaatsingsdata: deze beroepstypen vertegenwoordigen samen circa 80% van alle gerealiseerde uitstroom.</div>
+      <div class="tx">Overzicht van de 12 beroepstypen verdeeld over twee werkveldtypen — instap en beperkt toegankelijk — en de vier acquisitiemomenten die richting geven aan wanneer en hoe we werkgevers benaderen.</div>
     </div>
     <button onclick="openWerkgeversModal()" style="padding:9px 20px;background:var(--blue);color:#fff;border:none;border-radius:6px;font-size:12px;font-family:inherit;font-weight:600;cursor:pointer;white-space:nowrap;flex-shrink:0">Bekijk overzicht &rarr;</button>
   </div>
 </div>
 
+</div>
+
+<!-- BEROEPSTYPEN POPUP -->
+<div id="beroepstypen-popup-overlay" onclick="closeBeroepstypenPopup()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:10000;"></div>
+<div id="beroepstypen-popup-box" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:12px;max-width:860px;width:94%;max-height:90vh;overflow-y:auto;z-index:10001;box-shadow:0 24px 64px rgba(0,0,0,.3);">
+  <div style="background:#44546A;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;border-radius:12px 12px 0 0;position:sticky;top:0;z-index:1;">
+    <div>
+      <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:3px;">Den Haag Werkt &middot; Werkgeversdienstverlening</div>
+      <div style="font-size:15px;font-weight:700;color:#fff;">12 beroepstypen &mdash; circa 80% van alle plaatsingen</div>
+    </div>
+    <button onclick="closeBeroepstypenPopup()" style="background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:6px;padding:6px 14px;font-size:12px;cursor:pointer;font-family:inherit;flex-shrink:0;">&times; Sluiten</button>
+  </div>
+  <div style="padding:24px 28px;font-family:'Segoe UI',Arial,sans-serif;">
+    <p style="font-size:9pt;color:#6b7a8d;margin-bottom:20px;line-height:1.55;">Per beroepstype: wat voor werk het is, welke werkgevers erbij horen en welke instapfuncties beschikbaar zijn voor de DHW-doelgroep.</p>
+
+    <!-- INSTAPWERKVELDEN -->
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <div style="background:#70AD47;color:#fff;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:4px 14px;border-radius:4px;">Instapwerkvelden</div>
+      <div style="font-size:8pt;color:#6b7a8d;font-style:italic;">Breed toegankelijk &middot; Volume en eerste plaatsing</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:22px;">
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">1 &middot; Schoonmaak en facilitair</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Reinigen van ruimtes, gebouwen en objecten; conci&euml;rgetaken en huishoudelijke hulp.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Schoonmaakbedrijven, zorginstellingen, hotels, scholen, kantoren.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Schoonmaker, facilitair medewerker, conci&euml;rge, huishoudelijk medewerker.</div>
+      </div>
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">3 &middot; Retail en winkelmedewerkers</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Vullen van schappen, kassabeheer, klantbegeleiding en verkoopondersteuning.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Supermarktketens, doe-het-zelfzaken, kledingwinkels, warenhuizen.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Vakkenvuller, kassamedewerker, verkoopmedewerker nonfood.</div>
+      </div>
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">4 &middot; Productie en assemblage</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Uitvoeren van productiehandelingen en assemblagewerkzaamheden aan de lijn of werkbank.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Productiebedrijven, maakindustrie, verpakkingsbedrijven.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Productiemedewerker, assemblagemonteur.</div>
+      </div>
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">6 &middot; Horeca en catering</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Bereiden en serveren van eten en drinken, bediening, ondersteuning in de keuken.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Restaurants, fastfoodketens, cateringbedrijven, bedrijfsrestaurants, hotels.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Keukenassistent, afwasser, bedieningsmedewerker, medewerker fastfood.</div>
+      </div>
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">7 &middot; Logistiek en magazijn</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Ontvangen, opslaan, verwerken en verzenden van goederen; orderpicken en voorraadbeheer.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Distributiecentra, e-commercebedrijven, groothandels, logistieke dienstverleners.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Magazijnmedewerker, orderpicker, expeditiemedewerker.</div>
+      </div>
+      <div style="background:#f7fcf4;border-left:3px solid #70AD47;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">9 &middot; Groen en buitenruimte</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Onderhouden van groen, tuinen en openbare buitenruimte; ophalen van afval.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Hoveniersbedrijven, gemeentelijke groendiensten, afvalverwerkingsbedrijven.</div>
+        <div style="font-size:7.5pt;color:#3a7d1e;line-height:1.4;"><strong>Functies:</strong> Groenmedewerker, medewerker hoveniersbedrijf, vuilnisophaler.</div>
+      </div>
+    </div>
+
+    <!-- BEPERKT TOEGANKELIJK -->
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <div style="background:#ED7D31;color:#fff;font-size:7.5pt;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;padding:4px 14px;border-radius:4px;">Beperkt toegankelijke werkvelden</div>
+      <div style="font-size:8pt;color:#6b7a8d;font-style:italic;">Selectief &middot; Duurzame uitstroom en kwaliteit</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:20px;">
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">2 &middot; Beveiliging en toezicht</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Bewaken van objecten en openbare ruimte; handhaving en toezicht op veiligheid.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Beveiligingsbedrijven, gemeente Den Haag (BOA's), winkelketens, zorginstellingen.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Objectbeveiliger, medewerker toezicht en handhaving, BOA.</div>
+      </div>
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">5 &middot; Zorg en ondersteuning</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Persoonlijke verzorging, begeleiding en dagelijkse ondersteuning aan cli&euml;nten of kinderen.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Thuiszorgorganisaties, verpleeghuizen, woonbegeleiding, kinderopvang.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Zorghulp, helpende, medewerker kinderopvang, groeps- en woonbegeleider.</div>
+      </div>
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">8 &middot; Transport en bezorging</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Vervoeren van personen of goederen; rondes rijden en leveringen uitvoeren.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Taxibedrijven, koeriersdiensten, bezorgbedrijven.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Taxichauffeur, koerier, bestelwagenchauffeur.</div>
+      </div>
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">10 &middot; Administratie en secretarieel</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Verwerken van correspondentie en documenten, financieel-administratieve taken, secretari&euml;le ondersteuning.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Gemeenten, zakelijke dienstverleners, zorg- en onderwijsinstellingen.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Archiefmedewerker, secretarieel medewerker, financieel-administratief medewerker.</div>
+      </div>
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">11 &middot; Klantenservice en receptie</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Telefonisch en persoonlijk beantwoorden van vragen, verwijzen van bezoekers, klachtenafhandeling.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Gemeenten, zorgorganisaties, commerci&euml;le bedrijven, callcenters.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Receptionist, telefonist, medewerker klantenservice.</div>
+      </div>
+      <div style="background:#fdf8f3;border-left:3px solid #ED7D31;padding:10px 12px;border-radius:0 6px 6px 0;">
+        <div style="font-size:8pt;font-weight:700;color:#44546A;margin-bottom:5px;">12 &middot; Techniek en gebouwonderhoud</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werk:</strong> Onderhoudswerkzaamheden aan gebouwen en installaties; ondersteunende taken in de bouw.</div>
+        <div style="font-size:7.5pt;color:#1a2433;margin-bottom:3px;line-height:1.4;"><strong style="color:#6b7a8d;">Werkgevers:</strong> Onderhoudsbedrijven, woningcorporaties, bouwbedrijven.</div>
+        <div style="font-size:7.5pt;color:#b55a10;line-height:1.4;"><strong>Functies:</strong> Onderhoudsmedewerker gebouwen, hulparbeider bouw.</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:8px;">
+      <button onclick="closeBeroepstypenPopup()" style="background:#44546A;color:#fff;border:none;padding:9px 28px;border-radius:6px;font-size:9pt;font-weight:600;cursor:pointer;font-family:inherit;">Sluiten</button>
+    </div>
+  </div>
 </div>
 
 <!-- WERKGEVERS MODAL -->
@@ -1398,61 +1515,94 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
       <!-- ===== PAGINA 1 ===== -->
       <div style="border-bottom:3.5px solid #4472C4;padding-bottom:10px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:flex-end;">
         <div style="font-family:Georgia,serif;font-size:19pt;color:#44546A;line-height:1.15;">Welke werkgevers zoeken<br>wij in <span style="color:#4472C4">Den Haag?</span></div>
-        <div style="text-align:right;font-size:8pt;color:#6b7a8d;line-height:1.7;"><strong style="color:#ED7D31;display:block;">Den Haag Werkt</strong>Werkgeversdienstverlening<br>Versie 1.0 · Maart 2026</div>
+        <div style="text-align:right;font-size:8pt;color:#6b7a8d;line-height:1.7;"><strong style="color:#ED7D31;display:block;">Den Haag Werkt</strong>Werkgeversdienstverlening<br>Versie 2.0 · Maart 2026</div>
       </div>
 
-      <div style="display:inline-block;background:#4472C4;color:white;font-size:7pt;font-weight:bold;letter-spacing:0.13em;text-transform:uppercase;padding:3px 10px;margin-bottom:9px;">Prioritering op basis van beroepstypen en plaatsingsdata</div>
+      <div style="display:inline-block;background:#4472C4;color:white;font-size:7pt;font-weight:bold;letter-spacing:0.13em;text-transform:uppercase;padding:3px 10px;margin-bottom:9px;">Twee werkveldtypen op basis van toegankelijkheid voor de doelgroep</div>
 
-      <p style="font-size:9.5pt;color:#6b7a8d;margin-bottom:14px;line-height:1.55;">DHW richt haar acquisitie op werkgevers die functies bieden in de 12 beroepstypen die samen circa 80% van alle historische plaatsingen vertegenwoordigen. Met afnemende budgetten kiezen we bewust: we richten onze energie op sectoren en werkgevers waar uitstroom daadwerkelijk plaatsvindt en waar duurzame instapbanen realistisch zijn.</p>
+      <p style="font-size:9.5pt;color:#6b7a8d;margin-bottom:16px;line-height:1.55;">We sturen niet alleen op waar werk is, maar op hoe toegankelijk dat werk is voor onze doelgroep en welke rol het speelt in de route naar duurzame arbeid. We onderscheiden twee typen werkvelden. Dat voorkomt dat sectoren met hoge arbeidsmarktkrapte automatisch als 'hoog potentieel' worden gezien, terwijl ze in de praktijk niet voor de brede doelgroep bereikbaar zijn.</p>
 
-      <!-- Hoge prioriteit -->
-      <div style="display:flex;margin-bottom:7px;">
-        <div style="background:#70AD47;width:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="writing-mode:vertical-lr;font-size:6.5pt;font-weight:bold;letter-spacing:0.1em;text-transform:uppercase;color:white;padding:8px 3px;">Hoge prioriteit</span>
-        </div>
-        <div style="flex:1;padding-left:8px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;margin-bottom:5px;">
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Schoonmaak en facilitair</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Schoonmaakbedrijven, zorginstellingen, hotels, kantoren, scholen. Groot volume, lage instapdrempel.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Zorg en ondersteuning</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Thuiszorg, verpleeghuizen, kinderopvang, woonbegeleiding. Grote structurele vervangingsvraag.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Logistiek en magazijn</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Distributiecentra, e-commerce, groothandels, logistieke dienstverleners. Groeiend volume.</div></div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;">
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Retail en supermarkten</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Supermarktketens, warenhuizen, doe-het-zelfzaken. Groot volume, structurele aanwezigheid.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Sociaal ondernemers</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Inclusie als kernwaarde. Bereid tot jobcarving en begeleiding op maat. Intrinsiek gemotiveerd.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #70AD47;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">SROI-verplichte werkgevers</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Aannemers met gemeentelijke SROI-verplichting. Contractuele inclusieverplichting als aansturing.</div></div>
-          </div>
-        </div>
+      <!-- Tabel -->
+      <table style="width:100%;border-collapse:collapse;font-size:8.5pt;margin-bottom:20px;">
+        <thead>
+          <tr>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;width:17%;">Werkveldtype</th>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;width:20%;">Kenmerken werk</th>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;width:16%;">Toegankelijkheid doelgroep</th>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;width:16%;">Rol in strategie</th>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;width:15%;">Voorbeelden</th>
+            <th style="background:#44546A;color:#fff;padding:8px 10px;text-align:left;font-weight:700;font-size:7.5pt;">Focus accountmanager</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rij 1: Instapwerkvelden -->
+          <tr>
+            <td style="padding:0;vertical-align:top;border-bottom:2px solid #e8f5e9;">
+              <div style="background:#70AD47;height:100%;padding:10px 10px;display:flex;flex-direction:column;justify-content:center;min-height:100px;">
+                <div style="font-size:9pt;font-weight:700;color:#fff;margin-bottom:3px;">Instapwerkvelden</div>
+                <div style="font-size:7pt;color:rgba(255,255,255,0.8);line-height:1.4;">Breed toegankelijk</div>
+              </div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #e8f5e9;background:#f7fcf4;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Praktisch werk, taken snel aan te leren, beperkte instapeisen. Geschikt voor eerste plaatsingen en opbouw werkritme.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #e8f5e9;background:#f7fcf4;">
+              <div style="display:inline-block;background:#e8f5e9;color:#2d6a1a;font-size:7pt;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:6px;">Breed toegankelijk</div>
+              <div style="font-size:8pt;color:#1a2433;line-height:1.4;">Groot deel van de doelgroep kan hier direct terecht.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #e8f5e9;background:#f7fcf4;">
+              <div style="font-size:8pt;font-weight:700;color:#3a7d1e;margin-bottom:4px;">Volume en eerste plaatsing</div>
+              <div style="font-size:8pt;color:#1a2433;line-height:1.4;">Hier realiseren we de meeste uitstroom. Basis van het portfolio.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #e8f5e9;background:#f7fcf4;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Schoonmaak, logistiek, retail, horeca, groen</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #e8f5e9;background:#f7fcf4;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Snel schakelen, vacatures ophalen, werk passend maken, volume draaien</div>
+            </td>
+          </tr>
+          <!-- Rij 2: Beperkt toegankelijk -->
+          <tr>
+            <td style="padding:0;vertical-align:top;border-bottom:2px solid #fff4e8;">
+              <div style="background:#ED7D31;padding:10px 10px;display:flex;flex-direction:column;justify-content:center;min-height:100px;">
+                <div style="font-size:9pt;font-weight:700;color:#fff;margin-bottom:3px;">Beperkt toegankelijke werkvelden</div>
+                <div style="font-size:7pt;color:rgba(255,255,255,0.8);line-height:1.4;">Alleen deel doelgroep</div>
+              </div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #fff4e8;background:#fdf8f3;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Vraagt meer van kandidaten: vaardigheden, belastbaarheid, leervermogen of certificering. Kansrijk door krapte, maar niet voor iedereen direct bereikbaar.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #fff4e8;background:#fdf8f3;">
+              <div style="display:inline-block;background:#fde8d4;color:#b55a10;font-size:7pt;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:6px;">Selectief</div>
+              <div style="font-size:8pt;color:#1a2433;line-height:1.4;">Vraagt gerichtere selectie en vaak een voorbereidende stap.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #fff4e8;background:#fdf8f3;">
+              <div style="font-size:8pt;font-weight:700;color:#b55a10;margin-bottom:4px;">Duurzame uitstroom en kwaliteit</div>
+              <div style="font-size:8pt;color:#1a2433;line-height:1.4;">Langere tijdsinvestering, hogere duurzaamheid per plaatsing.</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #fff4e8;background:#fdf8f3;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Techniek, zorg, administratie / klantcontact, delen beveiliging</div>
+            </td>
+            <td style="padding:9px 10px;vertical-align:top;border-bottom:2px solid #fff4e8;background:#fdf8f3;">
+              <div style="font-size:8pt;color:#1a2433;line-height:1.5;">Selectie maken, werkgevers voorbereiden, leerlijnen organiseren, langere adem</div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+
+      <!-- Slotpunt -->
+      <div style="background:#f0f4fa;border-left:3px solid #4472C4;padding:10px 14px;margin-bottom:16px;">
+        <div style="font-size:8.5pt;color:#44546A;font-weight:700;margin-bottom:3px;">Waarom dit onderscheid?</div>
+        <div style="font-size:8pt;color:#1a2433;line-height:1.55;">Arbeidsmarktkrapte in een sector betekent niet automatisch dat dat werkveld geschikt is voor onze doelgroep. Een sector kan veel vacatures hebben én hoge eisen stellen. Door te sturen op toegankelijkheid — niet op krapte — voorkomen we dat we energie steken in werkvelden die in de praktijk te ver weg zijn voor de mensen die wij begeleiden.</div>
       </div>
 
-      <!-- Middel prioriteit -->
-      <div style="display:flex;margin-bottom:7px;">
-        <div style="background:#ED7D31;width:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="writing-mode:vertical-lr;font-size:6.5pt;font-weight:bold;letter-spacing:0.1em;text-transform:uppercase;color:white;padding:8px 3px;">Middel</span>
-        </div>
-        <div style="flex:1;padding-left:8px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;">
-            <div style="background:#f7f9fc;border-left:3px solid #ED7D31;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Horeca en catering</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Fastfoodketens, restaurants, bedrijfsrestaurants. Selectief inzetten op structurele werkgevers.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #ED7D31;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Beveiliging en toezicht</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Beveiligingsbedrijven, gemeente Den Haag (BOA's), winkelketens. Kandidaatprofiel is bepalend.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #ED7D31;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Transport en bezorging</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Taxibedrijven, koeriersdiensten, bezorgbedrijven. Rijbewijs vereist; gerichte matching nodig.</div></div>
-          </div>
-        </div>
+      <!-- Button: toon beroepstypen als popup -->
+      <div style="text-align:center;margin-bottom:24px;">
+        <button onclick="openBeroepstypenPopup()" style="background:#44546A;color:#fff;border:none;padding:9px 22px;border-radius:6px;font-size:8.5pt;font-weight:700;cursor:pointer;font-family:inherit;letter-spacing:0.3px;">
+          Bekijk de 12 beroepstypen waar wij 80% van onze uitstroom realiseren →
+        </button>
       </div>
-
-      <!-- Aanvullend -->
-      <div style="display:flex;margin-bottom:12px;">
-        <div style="background:#6b7a8d;width:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="writing-mode:vertical-lr;font-size:6.5pt;font-weight:bold;letter-spacing:0.1em;text-transform:uppercase;color:white;padding:8px 3px;">Aanvullend</span>
-        </div>
-        <div style="flex:1;padding-left:8px;">
-          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;">
-            <div style="background:#f7f9fc;border-left:3px solid #6b7a8d;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Groen en buitenruimte</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Hoveniersbedrijven, gemeentelijke groendiensten, afvalverwerkingsbedrijven.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #6b7a8d;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Techniek en gebouwonderhoud</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Onderhoudsbedrijven, woningcorporaties, bouwbedrijven. Kansen via vervangingsvraag.</div></div>
-            <div style="background:#f7f9fc;border-left:3px solid #6b7a8d;padding:7px 8px;"><div style="font-size:9pt;font-weight:700;color:#44546A;margin-bottom:3px;">Administratie en klantenservice</div><div style="font-size:7.5pt;color:#6b7a8d;line-height:1.45;">Gemeenten, zorginstellingen, callcenters. Vereist passend kandidaatprofiel.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-bottom:24px;"></div>
 
       <!-- ===== PAGINA 2 ===== -->
       <div style="border-bottom:3.5px solid #4472C4;padding-bottom:10px;margin-bottom:18px;display:flex;justify-content:space-between;align-items:flex-end;">
@@ -2562,38 +2712,84 @@ document.getElementById('wg-modal').addEventListener('click', function(e) {
     </div>
     <div class="tb-section">
       <div class="tb-section-header"><div class="tb-sec-num" style="background:var(--tb-green)">⊞</div><h2>Vier werkgeverstypen en strategie</h2></div>
-      <p class="tb-intro">Op basis van de VIO-scores rolt automatisch een werkgeverstype uit.</p>
+      <p class="tb-intro">Op basis van de VIO-scores rolt automatisch een werkgeverstype uit. Het kwadrant loopt van rechts boven (hoog gedrag én hoge intentie) naar links onder (laag gedrag én lage intentie). Investeer het meest in Krachtige Koplopers en Dromende Doeners.</p>
+      <div style="text-align:center;margin-bottom:8px;"><div style="display:inline-block;background:var(--tb-dark);color:#fff;padding:4px 18px;border-radius:4px;font-size:11px;font-weight:600">GEDRAG HOOG</div></div>
       <div class="types-grid">
-        <div class="type-card type-koploper"><div class="type-icon">🏆</div><h3>Krachtige Koplopers</h3><div class="type-tag">Hoge intentie + Hoog gedrag</div><div class="type-strategy">Strategie: Koesteren</div><ul><li>In het zonnetje zetten en als voorbeeld inzetten</li><li>Versterken wat goed gaat, belemmeringen wegnemen</li><li>Strategisch partnerschap aangaan voor langere termijn</li></ul></div>
-        <div class="type-card type-held"><div class="type-icon">🦸</div><h3>Onbewuste Helden</h3><div class="type-tag">Lage intentie + Hoog gedrag</div><div class="type-strategy">Strategie: Bewust maken</div><ul><li>Versterken wat goed gaat</li><li>Inclusief werkgeverschap opnemen in missie en visie</li><li>Contact onderhouden en waardering uitspreken</li></ul></div>
-        <div class="type-card type-doener"><div class="type-icon">🚀</div><h3>Dromende Doeners</h3><div class="type-tag">Hoge intentie + Laag gedrag</div><div class="type-strategy">Strategie: Activeren</div><ul><li>Focus op het kunnen: belemmeringen wegnemen</li><li>Concreet actieplan met haalbare eerste stappen</li><li>Ondersteunen bij werkaanpassingen en regelingen</li></ul></div>
-        <div class="type-card type-slaper"><div class="type-icon">💤</div><h3>Slapende Sterkhouders</h3><div class="type-tag">Lage intentie + Laag gedrag</div><div class="type-strategy">Strategie: Loslaten en op afstand volgen</div><ul><li>Geen intensieve persoonlijke inzet — de energie weegt niet op tegen het resultaat</li><li>Bereiken via collectieve kanalen: events, nieuwsbrief, inspirerende praktijkverhalen van koploperbedrijven</li><li>Periodiek peilen (bijv. jaarlijks) of de houding is veranderd — situaties en bestuurders wisselen</li></ul></div>
+        <div class="type-card type-held">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:4px">Links boven</div>
+          <h3>Onbewuste Helden</h3>
+          <div class="type-tag">Hoog gedrag · Lage intentie</div>
+          <div class="type-strategy" style="background:#fff4e8;color:#c06000">Strategie: Bewust maken &amp; borgen</div>
+          <ul>
+            <li>De werkgever doet het al — maar niet bewust of strategisch. Vaak gedreven door arbeidskrapte of pragmatisme, niet vanuit een uitgesproken inclusie-ambitie.</li>
+            <li>Versterken wat goed gaat: benoem de praktijk die er al is en sluit daarbij aan.</li>
+            <li>Inclusief werkgeverschap opnemen in missie en visie, zodat het verankerd raakt en niet afhankelijk blijft van individuele personen.</li>
+            <li>Waardering uitspreken en contact onderhouden. Deze werkgevers zijn waardevolle partners; zorg dat ze dat ook voelen.</li>
+          </ul>
+        </div>
+        <div class="type-card type-koploper">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:4px">Rechts boven</div>
+          <h3>Krachtige Koplopers</h3>
+          <div class="type-tag">Hoog gedrag · Hoge intentie</div>
+          <div class="type-strategy" style="background:#eaf7e0;color:#3a7d1e">Strategie: Koesteren &amp; als voorbeeld inzetten</div>
+          <ul>
+            <li>De ideale partner: actief, bewust en structureel inclusief. Inclusie is verankerd in HR-beleid en bedrijfsvoering. Dit zijn de ambassadeurs en innovators.</li>
+            <li>Koesteren: investeer in de relatie, vier successen en zet hen als rolmodel in bij andere werkgevers.</li>
+            <li>Versterken wat goed gaat en belemmeringen voor nieuwe of duurzame plaatsingen proactief wegnemen.</li>
+            <li>Strategisch partnerschap: langetermijnsamenwerking met breder dienstverleningsaanbod dan alleen vacaturegericht contact.</li>
+          </ul>
+        </div>
+        <div class="type-card type-slaper">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:4px">Links onder</div>
+          <h3>Slapende Sterkhouders</h3>
+          <div class="type-tag">Laag gedrag · Lage intentie</div>
+          <div class="type-strategy" style="background:#f5f5f5;color:#666">Strategie: Op afstand volgen</div>
+          <ul>
+            <li>Nog niet bereid of nog niet in beeld. Intensieve persoonlijke inzet weegt niet op tegen het te verwachten resultaat — zet je energie elders.</li>
+            <li>Bereiken via collectieve kanalen: evenementen, nieuwsbrief, inspirerende praktijkverhalen van koploperbedrijven.</li>
+            <li>Bespreek in teamverband of en wanneer intensivering zinvol is. Situaties en bestuurders wisselen — periodiek peilen (bijv. jaarlijks) of de houding is veranderd.</li>
+            <li>Eerste stap kan via SROI-verplichting of externe druk — gebruik dit als haakje voor een laagdrempelig gesprek.</li>
+          </ul>
+        </div>
+        <div class="type-card type-doener">
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#999;margin-bottom:4px">Rechts onder</div>
+          <h3>Dromende Doeners</h3>
+          <div class="type-tag">Laag gedrag · Hoge intentie</div>
+          <div class="type-strategy" style="background:#e8f0fc;color:#2a5ca6">Strategie: Activeren naar concrete actie</div>
+          <ul>
+            <li>De wil is er, maar de omzetting naar gedrag stokt. Vaak ontbreekt kennis van regelingen, structuur in aanpak of voldoende capaciteit. Dit segment heeft groot groeipotentieel.</li>
+            <li>Focus op het kunnen: wegnemen van belemmeringen, versterken van vaardigheden en het samen opstellen van een haalbaar actieplan.</li>
+            <li>Concreet actieplan met kleine eerste stappen die snel resultaat opleveren — een quickwin versterkt het vertrouwen.</li>
+            <li>Ondersteunen bij werkaanpassingen en regelingen (no-riskpolis, LKV, proefplaatsing) om de praktische drempel te verlagen.</li>
+          </ul>
+        </div>
       </div>
-      <div class="tb-tip">💡 Investeer het meeste in Krachtige Koplopers (koesteren) en Dromende Doeners (activeren). Onbewuste Helden vragen bewustwording en waardering. Slapende Sterkhouders bereik je via mainstream communicatie en volg je op afstand — pas als hun situatie of houding verandert, intensiveer je het contact.</div>
+      <div style="text-align:center;margin-top:8px;"><div style="display:inline-block;background:var(--tb-dark);color:#fff;padding:4px 18px;border-radius:4px;font-size:11px;font-weight:600">GEDRAG LAAG</div></div>
+      <div class="tb-tip" style="margin-top:16px;">Let op: de VIO-uitkomst is geen label, maar een spiegel. Gebruik het als gespreksbasis om samen met de werkgever te bepalen waar de energie naartoe gaat.</div>
     </div>
     <div class="tb-section">
       <div class="tb-section-header"><div class="tb-sec-num" style="background:var(--tb-blue)">W</div><h2>WILLEN — Handelingsopties</h2></div>
       <div class="factor-cards">
-        <div class="factor-card"><div class="factor-title">🎯 Attitude</div><p class="factor-desc">Ervaren en verwachte voor- en nadelen</p><ul class="factor-list"><li>Bespreek VIO-ervaringen: erken negatieve verwachtingen, check of ze kloppen</li><li>Voordelen benadrukken: imago, invulling vacatures, maatschappelijke bijdrage</li><li>Feiten presenteren: concrete resultaten bij vergelijkbare bedrijven</li><li>Positieve framing: spreek over 'talent benutten' en 'diversiteit als kracht'</li><li>Financiële risico's relativeren: informeer over LKV, no-riskpolis, jobcoach</li></ul><div class="gesprekstip">💬 "Wat zijn je ervaringen tot nu toe? Wat ging goed, en waar liep je tegenaan?"</div></div>
-        <div class="factor-card"><div class="factor-title">👥 Sociale norm</div><p class="factor-desc">Druk en steun vanuit de omgeving</p><ul class="factor-list"><li>Managementsteun activeren: bestuurders laten uitspreken dat inclusie belangrijk is</li><li>Inclusie vastleggen in gedragscodes en bedrijfswaarden</li><li>Teams die inclusief werken complimenteren en zichtbaar maken</li><li>Praktijkverhalen van koploperbedrijven delen</li><li>Externe druk benutten: quotumregeling, SROI-beleid, keurmerken (PSO)</li></ul><div class="gesprekstip">💬 "Hoe kijken je leidinggevenden aan tegen het werken met mensen uit de doelgroep?"</div></div>
-        <div class="factor-card"><div class="factor-title">💪 Eigen-effectiviteit</div><p class="factor-desc">Vertrouwen in eigen kunnen</p><ul class="factor-list"><li>Modeling: deel verhalen van vergelijkbare bedrijven</li><li>Workshops over inclusief werven en begeleiden</li><li>Stapsgewijs leren: begin met kleine, haalbare stappen</li><li>Positieve bekrachtiging: benadruk wat al goed gaat</li><li>Succeservaringen uit het verleden benoemen</li></ul><div class="gesprekstip">💬 "Waar ben je trots op? Wat zou een logische volgende stap zijn?"</div></div>
-        <div class="factor-card"><div class="factor-title">🎯 Intentie</div><p class="factor-desc">Voornemen en visie</p><ul class="factor-list"><li>Inclusie opnemen in beleid, missie en/of visie</li><li>Koppel aan concrete, meetbare doelen</li><li>Formats en voorbeelden van andere bedrijven aanbieden</li><li>Externe erkenning (PSO) om commitment te versterken</li></ul><div class="gesprekstip">💬 "Staat het bieden van werk aan de doelgroep al ergens in je beleid?"</div></div>
+        <div class="factor-card"><div class="factor-title">Attitude</div><p class="factor-desc">Ervaren en verwachte voor- en nadelen</p><ul class="factor-list"><li>Bespreek VIO-ervaringen: erken negatieve verwachtingen, check of ze kloppen</li><li>Voordelen benadrukken: imago, invulling vacatures, maatschappelijke bijdrage</li><li>Feiten presenteren: concrete resultaten bij vergelijkbare bedrijven</li><li>Positieve framing: spreek over 'talent benutten' en 'diversiteit als kracht'</li><li>Financiële risico's relativeren: informeer over LKV, no-riskpolis, jobcoach</li></ul><div class="gesprekstip">"Wat zijn je ervaringen tot nu toe? Wat ging goed, en waar liep je tegenaan?"</div></div>
+        <div class="factor-card"><div class="factor-title">Sociale norm</div><p class="factor-desc">Druk en steun vanuit de omgeving</p><ul class="factor-list"><li>Managementsteun activeren: bestuurders laten uitspreken dat inclusie belangrijk is</li><li>Inclusie vastleggen in gedragscodes en bedrijfswaarden</li><li>Teams die inclusief werken complimenteren en zichtbaar maken</li><li>Praktijkverhalen van koploperbedrijven delen</li><li>Externe druk benutten: quotumregeling, SROI-beleid, keurmerken (PSO)</li></ul><div class="gesprekstip">"Hoe kijken je leidinggevenden aan tegen het werken met mensen uit de doelgroep?"</div></div>
+        <div class="factor-card"><div class="factor-title">Eigen-effectiviteit</div><p class="factor-desc">Vertrouwen in eigen kunnen</p><ul class="factor-list"><li>Modeling: deel verhalen van vergelijkbare bedrijven</li><li>Workshops over inclusief werven en begeleiden</li><li>Stapsgewijs leren: begin met kleine, haalbare stappen</li><li>Positieve bekrachtiging: benadruk wat al goed gaat</li><li>Succeservaringen uit het verleden benoemen</li></ul><div class="gesprekstip">"Waar ben je trots op? Wat zou een logische volgende stap zijn?"</div></div>
+        <div class="factor-card"><div class="factor-title">Intentie</div><p class="factor-desc">Voornemen en visie</p><ul class="factor-list"><li>Inclusie opnemen in beleid, missie en/of visie</li><li>Koppel aan concrete, meetbare doelen</li><li>Formats en voorbeelden van andere bedrijven aanbieden</li><li>Externe erkenning (PSO) om commitment te versterken</li></ul><div class="gesprekstip">"Staat het bieden van werk aan de doelgroep al ergens in je beleid?"</div></div>
       </div>
     </div>
     <div class="tb-section">
       <div class="tb-section-header"><div class="tb-sec-num" style="background:var(--tb-orange)">K</div><h2>KUNNEN — Handelingsopties</h2></div>
       <div class="factor-cards">
-        <div class="factor-card"><div class="factor-title">🛠 Vaardigheden</div><p class="factor-desc">Regelingen, samenwerking en begeleiding</p><ul class="factor-list"><li>Informeren over regelingen: no-riskpolis, LKV, loonkostensubsidie, proefplaatsing</li><li>Ontzorgen: help bij subsidieaanvraag, formats en checklists</li><li>Gemeente als strategisch partner: vaste aanspreekpunten, maatwerkondersteuning</li><li>Trainingen: Harrie-training, Mentorwijs</li></ul><div class="gesprekstip">💬 "Ken je de no-riskpolis en het loonkostenvoordeel? Zal ik een overzicht geven?"</div></div>
-        <div class="factor-card"><div class="factor-title">📝 Actieplan</div><p class="factor-desc">Van intentie naar concrete stappen</p><ul class="factor-list"><li>Kleine proefprojecten: quickwins via werkervaringsplekken</li><li>Samen concrete doelen opstellen: realistisch, haalbaar, meetbaar</li><li>Actieplan opstellen op basis van VIO-analyse (wie, wat, wanneer)</li><li>Verankeren in HR-beleid: inclusieve KPI's en onboarding</li></ul><div class="gesprekstip">💬 "Wat is een haalbare eerste stap in de komende drie maanden?"</div></div>
-        <div class="factor-card"><div class="factor-title">🛡 Copingplan</div><p class="factor-desc">Voorbereid op tegenslagen</p><ul class="factor-list"><li>Mogelijke risico's verkennen: werkdruk, begeleidingstijd, weerstand</li><li>Voorbereiden op terugval: alternatieve taken bespreken</li><li>Vroeg-signalering: wie signaleert, informeert en escaleert?</li><li>Vast aanspreekpunt bij gemeente/WSP aanwijzen</li></ul><div class="gesprekstip">💬 "Wat zou je doen als een plaatsing even niet lekker loopt?"</div></div>
-        <div class="factor-card"><div class="factor-title">🔍 Werving en selectie</div><p class="factor-desc">Inclusieve instroom</p><ul class="factor-list"><li>Vacatures herschrijven naar kerntaken: duidelijke taal, geen jargon</li><li>Try &amp; Hire: proefplaatsing met leerdoelen als laagdrempelige start</li><li>Samenwerking met re-integratiedienstverleners (WSP, UWV)</li><li>Instroom- en doorstroomroutes ontwikkelen</li></ul><div class="gesprekstip">💬 "Heb je weleens gekeken of vacatureteksten onbedoeld mensen uitsluiten?"</div></div>
+        <div class="factor-card"><div class="factor-title">Vaardigheden</div><p class="factor-desc">Regelingen, samenwerking en begeleiding</p><ul class="factor-list"><li>Informeren over regelingen: no-riskpolis, LKV, loonkostensubsidie, proefplaatsing</li><li>Ontzorgen: help bij subsidieaanvraag, formats en checklists</li><li>Gemeente als strategisch partner: vaste aanspreekpunten, maatwerkondersteuning</li><li>Trainingen: Harrie-training, Mentorwijs</li></ul><div class="gesprekstip">"Ken je de no-riskpolis en het loonkostenvoordeel? Zal ik een overzicht geven?"</div></div>
+        <div class="factor-card"><div class="factor-title">Actieplan</div><p class="factor-desc">Van intentie naar concrete stappen</p><ul class="factor-list"><li>Kleine proefprojecten: quickwins via werkervaringsplekken</li><li>Samen concrete doelen opstellen: realistisch, haalbaar, meetbaar</li><li>Actieplan opstellen op basis van VIO-analyse (wie, wat, wanneer)</li><li>Verankeren in HR-beleid: inclusieve KPI's en onboarding</li></ul><div class="gesprekstip">"Wat is een haalbare eerste stap in de komende drie maanden?"</div></div>
+        <div class="factor-card"><div class="factor-title">Copingplan</div><p class="factor-desc">Voorbereid op tegenslagen</p><ul class="factor-list"><li>Mogelijke risico's verkennen: werkdruk, begeleidingstijd, weerstand</li><li>Voorbereiden op terugval: alternatieve taken bespreken</li><li>Vroeg-signalering: wie signaleert, informeert en escaleert?</li><li>Vast aanspreekpunt bij gemeente/WSP aanwijzen</li></ul><div class="gesprekstip">"Wat zou je doen als een plaatsing even niet lekker loopt?"</div></div>
+        <div class="factor-card"><div class="factor-title">Werving en selectie</div><p class="factor-desc">Inclusieve instroom</p><ul class="factor-list"><li>Vacatures herschrijven naar kerntaken: duidelijke taal, geen jargon</li><li>Try &amp; Hire: proefplaatsing met leerdoelen als laagdrempelige start</li><li>Samenwerking met re-integratiedienstverleners (WSP, UWV)</li><li>Instroom- en doorstroomroutes ontwikkelen</li></ul><div class="gesprekstip">"Heb je weleens gekeken of vacatureteksten onbedoeld mensen uitsluiten?"</div></div>
       </div>
     </div>
     <div class="tb-section">
       <div class="tb-section-header"><div class="tb-sec-num" style="background:var(--tb-green)">D</div><h2>DOEN — Belemmeringen wegnemen</h2></div>
       <div class="factor-cards">
-        <div class="factor-card"><div class="factor-title">🚧 Belemmeringen wegnemen</div><ul class="factor-list" style="margin-top:10px"><li>Open hiring overwegen; inclusieve werving; proefprojecten</li><li>Werk creëren: jobcarving, functiecreatie, taakanalyse (BIA)</li><li>Werkaanpassingen: taken, werktijden, pauzes, tempo en flexibiliteit</li><li>Draagvlak creëren: breed betrekken, ambassadeurs aanstellen</li></ul><div class="gesprekstip">💬 "Wat is de grootste drempel? Laten we kijken wat we daaraan kunnen doen."</div></div>
-        <div class="factor-card"><div class="factor-title">🔄 Inclusief gedrag volhouden</div><ul class="factor-list" style="margin-top:10px"><li>Inspirerend management: visie uitdragen en randvoorwaarden creëren</li><li>Sociale steun mobiliseren: intervisie, buddy-systeem, leernetwerken</li><li>Successen benoemen en breed communiceren</li><li>Strategisch partnerschap: langetermijnsamenwerking breder dan vacatures</li></ul><div class="gesprekstip">💬 "Hoe zorg je dat inclusief werken geen eenmalig project blijft?"</div></div>
+        <div class="factor-card"><div class="factor-title">Belemmeringen wegnemen</div><ul class="factor-list" style="margin-top:10px"><li>Open hiring overwegen; inclusieve werving; proefprojecten</li><li>Werk creëren: jobcarving, functiecreatie, taakanalyse (BIA)</li><li>Werkaanpassingen: taken, werktijden, pauzes, tempo en flexibiliteit</li><li>Draagvlak creëren: breed betrekken, ambassadeurs aanstellen</li></ul><div class="gesprekstip">"Wat is de grootste drempel? Laten we kijken wat we daaraan kunnen doen."</div></div>
+        <div class="factor-card"><div class="factor-title">Inclusief gedrag volhouden</div><ul class="factor-list" style="margin-top:10px"><li>Inspirerend management: visie uitdragen en randvoorwaarden creëren</li><li>Sociale steun mobiliseren: intervisie, buddy-systeem, leernetwerken</li><li>Successen benoemen en breed communiceren</li><li>Strategisch partnerschap: langetermijnsamenwerking breder dan vacatures</li></ul><div class="gesprekstip">"Hoe zorg je dat inclusief werken geen eenmalig project blijft?"</div></div>
       </div>
     </div>
     <div class="tb-section">
@@ -2623,9 +2819,163 @@ document.getElementById('wg-modal').addEventListener('click', function(e) {
 
 </div>
 
-<script>
-// ===== MAIN TAB CONTROLLER =====
+<!-- VIO POPUP MODAL -->
+<div id="vio-popup-overlay" onclick="closeVioPopup()" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.55);z-index:9000;"></div>
+<div id="vio-popup-box" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:14px;max-width:620px;width:90%;max-height:85vh;overflow-y:auto;z-index:9001;box-shadow:0 20px 60px rgba(0,0,0,.25);">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:20px 24px 14px;border-bottom:1px solid #e2e6ec;position:sticky;top:0;background:#fff;border-radius:14px 14px 0 0;">
+    <h2 id="vio-popup-title" style="font-size:16px;font-weight:700;color:#44546A;font-family:inherit;"></h2>
+    <button onclick="closeVioPopup()" style="background:none;border:1px solid #e2e6ec;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:16px;color:#666;display:flex;align-items:center;justify-content:center;font-family:inherit;">×</button>
+  </div>
+  <div id="vio-popup-content" style="padding:22px 24px;font-size:13.5px;line-height:1.7;color:#333;"></div>
+</div>
 
+<script>
+const vioPopupContent = {
+  attitude: {
+    title: 'Attitude — houding tegenover inclusief ondernemen',
+    html: `<p><strong>Wat is het?</strong><br>Attitude verwijst naar de houding van het bedrijf ten aanzien van het bieden van werk aan mensen met een kwetsbare arbeidsmarktpositie. Die houding wordt bepaald door wat het bedrijf verwacht dat inclusief ondernemen hen oplevert of kost.</p>
+    <p><strong>Negatieve verwachtingen (rood) kunnen zijn:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Vrees voor hoger ziekteverzuim</li><li>Zorgen over extra begeleiding en tijdsinvestering</li><li>Financiële risico's door productiviteitsverlies</li></ul>
+    <p><strong>Positieve verwachtingen (groen) kunnen zijn:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Vacatures kunnen vervullen die anders leeg blijven</li><li>Positiever imago, betere afspiegeling van de samenleving</li><li>Invulling geven aan social return-beleid</li><li>Bijdragen aan betere bedrijfsresultaten</li></ul>
+    <p><strong>In gesprek:</strong> Vraag door op de achterliggende overtuigingen. Een negatieve attitude is vaak gebaseerd op beelden, niet op feiten. Door samen te verkennen welke manieren er zijn om belemmeringen te beperken, kun je de attitude positief beïnvloeden.</p>`
+  },
+  socialeNorm: {
+    title: 'Sociale norm — druk en steun vanuit de omgeving',
+    html: `<p><strong>Wat is het?</strong><br>De sociale norm verwijst naar de druk of steun die een werkgever ervaart om sociaal te ondernemen — en hoe zwaar de werkgever tilt aan de mening van die partijen.</p>
+    <p><strong>Relevante stakeholders:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Landelijke overheid (quotumregeling, Wet banenafspraak)</li><li>Gemeente, UWV, werkbedrijf</li><li>Klanten en opdrachtgevers</li><li>Vakbonden, OR of werknemers zelf</li><li>Investeerders en aandeelhouders</li><li>Andere bedrijven in de regio of branche</li></ul>
+    <p><strong>Belangrijk:</strong> Sociale druk werkt alleen als het bedrijf ook waarde hecht aan de mening van die partijen. Eén stakeholder die druk uitoefent is zelden voldoende — het helpt als meerdere partijen het belang van inclusie uitdragen.</p>
+    <p><strong>In gesprek:</strong> Vraag welke partijen verwachten dat het bedrijf inclusief werkt, en hoe zwaar het bedrijf aan hun mening tilt. Een goed haakje is ook om te vragen hoeveel andere bedrijven in het netwerk al werken met mensen uit de doelgroep.</p>`
+  },
+  eigenEffectiviteit: {
+    title: 'Eigen-effectiviteit — vertrouwen in eigen kunnen',
+    html: `<p><strong>Wat is het?</strong><br>Eigen-effectiviteit is de verwachting van het bedrijf over de eigen mogelijkheden om werk te bieden aan mensen met een kwetsbare arbeidsmarktpositie — ook onder moeilijke of onverwachte omstandigheden.</p>
+    <p><strong>Een lage eigen-effectiviteit kan ontstaan door:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Negatieve ervaringen in het verleden</li><li>Onzekerheid over hoe begeleiding te organiseren</li><li>Onduidelijkheid over welke ondersteuning beschikbaar is</li><li>Angst voor uitval, conflicten of productiviteitsverlies</li></ul>
+    <p><strong>Hoe het te versterken:</strong> Eigen-effectiviteit groeit door concrete positieve ervaringen. Begin klein — een proefplaatsing of werkervaringsplek — en bouw van daaruit. Eerdere successen oprakelen helpt: herinner de werkgever aan wat al goed is gegaan. Als eerdere plaatsingen mislukten, verken dan samen waarom en hoe dat de volgende keer te voorkomen is.</p>
+    <p><strong>In gesprek:</strong> Vraag of het bedrijf denkt in staat te zijn werk te bieden, ook als subsidies wegvallen, de arbeidsmarkt krimpt of het bedrijf verliezen lijdt. Zo breng je robuustheid in kaart.</p>`
+  },
+  vaardigheden: {
+    title: 'Vaardigheden — kennis, regelingen en begeleiding',
+    html: `<p><strong>Wat is het?</strong><br>Vaardigheden gaan over het vermogen van het bedrijf om inclusief ondernemen in de praktijk te brengen. Dat betekent niet dat alles in huis hoeft te zijn — maar wel dat de weg naar ondersteuning bekend is.</p>
+    <p><strong>Relevante vaardigheden en kennis:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Bekendheid met regelingen: no-riskpolis, LKV, loonkostensubsidie, jobcoach, proefplaatsing</li><li>Bekendheid met externe partijen: WSP, UWV, re-integratiebedrijven, jobcoachorganisaties</li><li>Leidinggevenden die getraind zijn in omgang met de doelgroep</li><li>Vermogen om werkaanpassingen te organiseren</li></ul>
+    <p><strong>In gesprek:</strong> Bespreek welke regelingen het bedrijf kent en gebruikt. Bied vroegtijdig informatie aan — je hoeft niet te wachten tot een kandidaat gevonden is. Informeer ook over bij welke partijen het bedrijf terecht kan voor welke vraag.</p>`
+  },
+  actieplan: {
+    title: 'Actieplan — van voornemen naar uitvoering',
+    html: `<p><strong>Wat is het?</strong><br>Een actieplan bevat concrete, geplande acties met een duidelijke taakverdeling: wie doet wat en wanneer. Het is het verschil tussen een goede intentie en daadwerkelijk handelen.</p>
+    <p><strong>Mogelijke acties in een actieplan:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Arbeidsplekken creëren bij nieuwe opdrachten of vanuit bestaande banen (job carving)</li><li>Werkaanpassingen: werktijden, werktempo, pauzes</li><li>Werkervaringsplekken, stages of leerwerkprojecten aanbieden</li><li>Werving- en selectieprocedure aanpassen</li><li>Interne ambassadeurs aanwijzen</li></ul>
+    <p><strong>In gesprek:</strong> Beschrijf acties zo concreet mogelijk en beleg ze bij een verantwoordelijke actiehouder. Ga samen na of de benodigde vaardigheden in huis zijn of dat ondersteuning gewenst is.</p>`
+  },
+  copingplan: {
+    title: 'Copingplan — klaar voor als het tegenzit',
+    html: `<p><strong>Wat is het?</strong><br>Een copingplan bevat concrete afspraken voor als er belemmeringen of problemen optreden. Het gaat om vooruitdenken: wat doen we als een plaatsing anders uitpakt dan verwacht?</p>
+    <p><strong>Voorbeelden van uitdagingen om op voor te bereiden:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Medewerker is veelvuldig ziek of afwezig</li><li>Meer begeleiding nodig dan voorzien</li><li>Communicatie- of samenwerkingsproblemen op de werkvloer</li><li>Subsidieregelingen die worden afgeschaft</li><li>Bedrijfseconomische tegenslag</li></ul>
+    <p><strong>In gesprek:</strong> Vraag of het bedrijf nagedacht heeft over oplossingen voor mogelijke problemen. Bespreek wie ingeschakeld kan worden — intern (leidinggevende, buddy) of extern (jobcoach, WSP). Maak vroeg-signalering concreet: wanneer geef je aan de bel? Wie informeer je dan?</p>`
+  },
+  belemmeringen: {
+    title: 'Belemmeringen — obstakels die in de weg staan',
+    html: `<p><strong>Wat is het?</strong><br>Belemmeringen zijn factoren die een werkgever ervan weerhouden werk te bieden aan de doelgroep. Ze kunnen intern zijn (cultuur, functiehuis, geen vacatures) of extern (economie, regelgeving).</p>
+    <p><strong>Interne belemmeringen:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Gebrek aan vacatures of passend werk voor de doelgroep</li><li>Bedrijfscultuur die weinig ruimte biedt voor maatwerk</li><li>Geen of beperkt draagvlak bij directie, leidinggevenden of collega's</li></ul>
+    <p><strong>Externe belemmeringen:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Economische situatie of krimp in de sector</li><li>Wet- en regelgeving die belemmerend werkt</li></ul>
+    <p><strong>In gesprek:</strong> Formuleer de kaders waarbinnen plaatsingen mogelijk zijn en verken daarbinnen de opties. Zijn er nu geen vacatures? Anticipeer op de toekomst. Onvoldoende werk voor een volledig functie? Onderzoek of job carving of samenwerking met andere werkgevers een oplossing biedt.</p>`
+  },
+  uitsturen: {
+    title: 'Stap 1: De VIO uitsturen — wat is de VIO?',
+    html: `<p><strong>Wat is de VIO?</strong><br>De Vragenlijst Inclusief Ondernemen (VIO) is een wetenschappelijk onderbouwd instrument, ontwikkeld door TNO. Het geeft inzicht in hoe een organisatie omgaat met inclusief werkgeverschap — niet alleen wat ze doen, maar waarom en in welke mate.</p>
+    <p><strong>De VIO meet drie dimensies:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li><strong>Intentie (willen)</strong> — motivatie, visie en houding van management en medewerkers</li><li><strong>Vermogen (kunnen)</strong> — kennis, vaardigheden, processen en begeleiding</li><li><strong>Gedrag (doen)</strong> — wat er daadwerkelijk gebeurt: aannemen, begeleiden, aanpassen</li></ul>
+    <p><strong>Hoe werkt het?</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Invullen duurt circa 15 minuten</li><li>De werkgever vult in vanuit eigen rol en ervaring — er zijn geen goede of foute antwoorden</li><li>Met de stoplichtmethode (groen/oranje/rood) wordt direct zichtbaar waar de organisatie al goed in is en waar ontwikkelpotentieel zit</li><li>Meerdere collega's (HR, management, operatie) kunnen de vragenlijst invullen — verschillen tussen perspectieven zijn waardevol</li></ul>
+    <p><strong>Hoe uitsturen?</strong> Log in op <strong>mijnvio.nl</strong>, maak een adviseur-account aan en stuur de werkgever de persoonlijke uitnodigingslink. Zodra de werkgever de VIO heeft ingevuld en toestemming heeft gegeven, zie jij de resultaten direct in jouw dashboard.</p>`
+  },
+  bespreken: {
+    title: 'Stap 2: De VIO-uitkomst bespreken',
+    html: `<p><strong>Wat bespreek je?</strong><br>De VIO-uitkomst is geen rapport dat je overlegt — het is een gespreksopener. Verken samen wat de scores betekenen voor de werkgever en welke stappen logisch zijn.</p>
+    <p><strong>Principes voor het goede gesprek:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Start met sterke punten: wat gaat al goed? Dat versterkt eigenaarschap en vertrouwen.</li><li>Bespreek aandachtspunten constructief: niet als tekortkomingen, maar als groeikansen.</li><li>Zorg voor een win-win perspectief: koppel acties aan de belangen en mogelijkheden van het bedrijf.</li><li>Stel de werkgever centraal: laat hen zoveel mogelijk zelf tot conclusies komen.</li></ul>
+    <p><strong>Per VIO-factor bespreek je:</strong></p>
+    <ul style="margin:8px 0 12px 16px"><li>Attitude: welke ervaringen en verwachtingen liggen eronder?</li><li>Sociale norm: welke partijen verwachten wat van dit bedrijf?</li><li>Eigen-effectiviteit: wat heeft het bedrijf al gedaan en wat geeft hen vertrouwen?</li><li>Vaardigheden: welke regelingen kent en gebruikt het bedrijf al?</li><li>Actieplan: heeft het bedrijf concrete plannen — en zo ja, wie is verantwoordelijk?</li><li>Copingplan: is nagedacht over tegenslagen?</li><li>Belemmeringen: wat staat er in de weg?</li></ul>`
+  },
+  segment: {
+    title: 'Stap 3: Segment bepalen — welke vier typen zijn er?',
+    html: `<p>Op basis van de VIO-scores plaatsen we de werkgever in een van de vier kwadranten. Dit bepaalt de intensiteit en aard van de dienstverlening.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;">
+      <div style="background:#E8F5E9;border-radius:8px;padding:12px;border-left:3px solid #70AD47"><strong style="color:#3a7d1e">Krachtige Koplopers</strong><br><small>Hoog gedrag + Hoge intentie<br>Koesteren, als ambassadeur inzetten</small></div>
+      <div style="background:#FFF3E0;border-radius:8px;padding:12px;border-left:3px solid #ED7D31"><strong style="color:#c06000">Onbewuste Helden</strong><br><small>Hoog gedrag + Lage intentie<br>Bewust maken, borgen</small></div>
+      <div style="background:#E3F2FD;border-radius:8px;padding:12px;border-left:3px solid #4472C4"><strong style="color:#2a5ca6">Dromende Doeners</strong><br><small>Laag gedrag + Hoge intentie<br>Activeren naar actie</small></div>
+      <div style="background:#F5F5F5;border-radius:8px;padding:12px;border-left:3px solid #A5A5A5"><strong style="color:#666">Slapende Sterkhouders</strong><br><small>Laag gedrag + Lage intentie<br>Op afstand volgen</small></div>
+    </div>`
+  },
+  aanpak: {
+    title: 'Stap 4: Aanpak op maat',
+    html: `<p>De VIO-uitkomst bepaalt welke producten en diensten worden ingezet. Per factor wordt maatwerk geleverd:</p>
+    <ul style="margin:10px 0 12px 16px">
+      <li><strong>Lage attitude:</strong> evenementen, bewustwordingstraining, praktijkvoorbeelden</li>
+      <li><strong>Lage sociale norm:</strong> SROI-beleid, community-events, peer learning</li>
+      <li><strong>Lage eigen-effectiviteit:</strong> proefplaatsing, detachering, jobcoaching</li>
+      <li><strong>Weinig vaardigheden:</strong> regelingeninformatie, no-riskpolis uitleggen, instrumentengids</li>
+      <li><strong>Geen actieplan:</strong> job carving, functiecreatie, actieplan samen opstellen</li>
+      <li><strong>Geen copingplan:</strong> begeleiding na plaatsing, taaltools, afspraken vroeg-signalering</li>
+      <li><strong>Veel belemmeringen:</strong> werkplekscan, arbeidsdeskundig advies, werkaanpassingen</li>
+    </ul>
+    <p>Zie de tab <em>Producten &amp; Diensten</em> voor het volledige overzicht per factor.</p>`
+  },
+  herijken: {
+    title: 'Stap 5: Periodiek herijken',
+    html: `<p><strong>Waarom herijken?</strong><br>De situatie van een werkgever verandert: nieuwe directeur, andere strategie, economische tegenslag of juist groei. Periodiek de VIO opnieuw afnemen maakt voortgang zichtbaar en zorgt dat de aanpak blijft aansluiten.</p>
+    <p><strong>Aanbevolen ritme:</strong></p>
+    <ul style="margin:8px 0 12px 16px">
+      <li>Actieve accounts: minimaal één keer per jaar de VIO-scores bespreken</li>
+      <li>Bij significante wijzigingen in het bedrijf: opnieuw afnemen</li>
+      <li>Gebruik de vergelijkingsfunctie in MijnVIO om twee metingen naast elkaar te leggen</li>
+    </ul>
+    <p><strong>Leerlessen ophalen (stap 4 methodisch werken):</strong> Blik ook terug op de werkwijze zelf — wat ging goed, wat kon beter, welke interventies waren effectief? Dit versterkt zowel de relatie als de kwaliteit van de begeleiding.</p>`
+  }
+};
+
+function openVioPopup(key) {
+  var data = vioPopupContent[key];
+  if (!data) return;
+  document.getElementById('vio-popup-title').textContent = data.title;
+  document.getElementById('vio-popup-content').innerHTML = data.html;
+  document.getElementById('vio-popup-overlay').style.display = 'block';
+  document.getElementById('vio-popup-box').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeVioPopup() {
+  document.getElementById('vio-popup-overlay').style.display = 'none';
+  document.getElementById('vio-popup-box').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    closeVioPopup();
+    closeBeroepstypenPopup();
+  }
+});
+
+function toggleBeroepstypen() {}
+
+function openBeroepstypenPopup() {
+  document.getElementById('beroepstypen-popup-overlay').style.display = 'block';
+  document.getElementById('beroepstypen-popup-box').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeBeroepstypenPopup() {
+  document.getElementById('beroepstypen-popup-overlay').style.display = 'none';
+  document.getElementById('beroepstypen-popup-box').style.display = 'none';
+  document.body.style.overflow = '';
+}
+</script>
+
+<script>
 let c=0;const t=8;
 const ti=[
 ["Werkgeversbenadering 2025","Vier pijlers, drie typen werkgevers, een samenhangend systeem"],
