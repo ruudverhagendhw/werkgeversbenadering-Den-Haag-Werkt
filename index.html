@@ -1193,6 +1193,33 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
   .igm-arrow{transform:rotate(90deg)}
   .detail-page-title{display:none}
 }
+/* ===== PROPOSITIE POPUP ===== */
+.prop-link{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:600;color:var(--blue);background:#eef3fb;border:1px solid #c8d9f5;border-radius:4px;padding:2px 7px;cursor:pointer;margin-left:6px;vertical-align:middle;transition:all .15s;white-space:nowrap}
+.prop-link:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+.prop-overlay{display:none;position:fixed;inset:0;background:rgba(30,40,60,.45);z-index:9000;align-items:center;justify-content:center;padding:20px}
+.prop-overlay.open{display:flex}
+.prop-modal{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.22);animation:popIn .2s ease}
+@keyframes popIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.prop-modal-hdr{padding:22px 24px 14px;border-bottom:1px solid #eee;display:flex;align-items:flex-start;gap:12px}
+.prop-modal-icon{width:40px;height:40px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}.prop-modal-icon:empty{display:none}
+.prop-modal-title{flex:1}
+.prop-modal-title h3{font-size:16px;font-weight:700;color:var(--dark);margin-bottom:2px}
+.prop-modal-title p{font-size:11.5px;color:var(--tl);line-height:1.5}
+.prop-modal-close{background:none;border:none;font-size:20px;color:#aaa;cursor:pointer;padding:0 0 4px 8px;line-height:1;flex-shrink:0}
+.prop-modal-close:hover{color:#333}
+.prop-modal-body{padding:18px 24px}
+.prop-section{margin-bottom:16px}
+.prop-section-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:var(--tl);margin-bottom:7px}
+.prop-section p{font-size:12.5px;color:#333;line-height:1.65}
+.prop-bullets{list-style:none;padding:0;margin:0}
+.prop-bullets li{font-size:12px;color:#333;padding:4px 0 4px 16px;position:relative;line-height:1.5;border-bottom:1px solid #f5f5f5}
+.prop-bullets li:last-child{border-bottom:none}
+.prop-bullets li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.prop-modal-footer{padding:14px 24px 20px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eee}
+.prop-doc-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--blue);text-decoration:none;padding:8px 16px;border:1.5px solid var(--blue);border-radius:7px;transition:all .15s}
+.prop-doc-link:hover{background:var(--blue);color:#fff}
+.prop-modal-footer .close-btn{font-size:12px;color:var(--tl);background:none;border:none;cursor:pointer;padding:8px 12px}
+.prop-modal-footer .close-btn:hover{color:#333}
 </style>
 </head>
 <body>
@@ -1369,16 +1396,16 @@ body{font-family:'Inter',sans-serif;background:#f5f6f8;color:#2d3748}
 <div class="hl mt2" style="border-left-color:var(--green)"><div class="ts">Passief beheer is geen eindstatus. Wanneer de situatie verandert kan de werkgever op elk moment terug naar actief accountmanagement. De drempel is laag, de beslissing bewust.</div></div>
 </div>
 <div class="pnl" id="p5">
-<div class="card cen mb2" style="background:linear-gradient(135deg,#fff8f0,#fff)"><div style="font-size:17px;font-weight:700;color:var(--dark)">Producten &amp; Diensten</div><div class="ts mt" style="max-width:720px;margin:0 auto">Het aanbod is gekoppeld aan de zeven VIO-factoren. Per factor wordt bepaald welke producten en diensten passend zijn. Zo wordt het aanbod maatwerk in plaats van een generieke menukaart.</div></div>
+<div class="card cen mb2" style="background:linear-gradient(135deg,#fff8f0,#fff)"><div style="font-size:17px;font-weight:700;color:var(--dark)">Producten &amp; Diensten</div><div class="ts mt" style="max-width:720px;margin:0 auto">Het aanbod is gekoppeld aan de zeven VIO-factoren. Per factor wordt bepaald welke producten en diensten passend zijn. Zo wordt het aanbod maatwerk in plaats van een generieke menukaart.</div><div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center"><span style="font-size:11px;color:var(--tl);align-self:center;font-weight:600">Proposities:</span><span class="prop-link" onclick="openProp('jobcarving')" style="font-size:11px">&#9432; Jobcarving</span><span class="prop-link" onclick="openProp('functiecreatie')" style="font-size:11px">&#9432; Functiecreatie</span><span class="prop-link" onclick="openProp('beschut')" style="font-size:11px">&#9432; Beschut werk</span><span class="prop-link" onclick="openProp('taal')" style="font-size:11px">&#9432; Taalinzet</span><span class="prop-link" onclick="openProp('lll')" style="font-size:11px">&#9432; Leven Lang Ontwikkelen</span><span class="prop-link" onclick="openProp('begeleiding')" style="font-size:11px">&#9432; Begeleiding na plaatsing</span></div></div>
 <div class="sec" style="color:var(--blue)">Intentie: 3 factoren (Willen)</div>
 <div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px">Attitude</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever heeft onvoldoende bewustzijn of bereidheid</div><table class="pt"><tr><td style="width:30%;font-weight:600">VIO bespreken</td><td>VIO-uitkomst als gespreksbasis voor bewustwording en segmentatie</td></tr><tr><td style="font-weight:600">Werkgeversbijeenkomsten</td><td>Bijeenkomsten voor werkgevers en kandidaten</td></tr><tr><td style="font-weight:600">Trainingen werkgevers</td><td>Bewustwording vooroordelen, omgang met de doelgroep</td></tr><tr><td style="font-weight:600">No-riskpolis uitleg</td><td>Ontzorgen door risico's concreet te benoemen en weg te nemen</td></tr><tr><td style="font-weight:600">Masterclasses</td><td>Verdieping op inclusief werkgeverschap voor geïnteresseerde werkgevers</td></tr></table></div>
 <div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px">Sociale norm</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever ervaart onvoldoende steun of druk uit omgeving</div><table class="pt"><tr><td style="width:30%;font-weight:600">SROI</td><td>Inclusie als norm via aanbesteding en contractuele afspraken</td></tr><tr><td style="font-weight:600">PSO-certificering</td><td>Prestatieladder Socialer Ondernemen: aantoonbaar inclusief ondernemen</td></tr><tr><td style="font-weight:600">Fondsen en financiers</td><td>Verbinden van werkgevers met relevante subsidies en fondsen</td></tr><tr><td style="font-weight:600">Samenwerkingsovereenkomst</td><td>Formele afspraken over samenwerking en verwachtingen</td></tr><tr><td style="font-weight:600">Werkgeverscommunity</td><td>Peer learning, themasessies, introductie bij andere werkgevers</td></tr></table></div>
-<div class="card mb2"><div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px">Eigen-effectiviteit</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever twijfelt of het organiseerbaar is</div><table class="pt"><tr><td style="width:30%;font-weight:600">Proefplaatsing</td><td>2 maanden proef, laagdrempelig ervaring opdoen</td></tr><tr><td style="font-weight:600">Detachering</td><td>Kandidaat inzetten via detachering, lager risico</td></tr><tr><td style="font-weight:600">Jobcoaching</td><td>Begeleiding op de werkplek</td></tr><tr><td style="font-weight:600">Leermeestertraining</td><td>Training voor begeleidende collega's</td></tr><tr><td style="font-weight:600">Werkplekanalyse</td><td>Analyse geschiktheid en aanpassingen</td></tr></table></div>
+<div class="card mb2"><div style="font-size:13px;font-weight:700;color:var(--blue);margin-bottom:4px">Eigen-effectiviteit</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever twijfelt of het organiseerbaar is</div><table class="pt"><tr><td style="width:30%;font-weight:600">Proefplaatsing</td><td>2 maanden proef, laagdrempelig ervaring opdoen</td></tr><tr><td style="font-weight:600">Detachering</td><td>Kandidaat inzetten via detachering, lager risico</td></tr><tr><td style="font-weight:600">Jobcoaching / Begeleiding na plaatsing <span class="prop-link" onclick="openProp('begeleiding')">&#9432; Propositie</span></td><td>Begeleiding op de werkplek en na plaatsing</td></tr><tr><td style="font-weight:600">Leermeestertraining</td><td>Training voor begeleidende collega's</td></tr><tr><td style="font-weight:600">Werkplekanalyse</td><td>Analyse geschiktheid en aanpassingen</td></tr></table></div>
 <div class="sec" style="color:var(--dark)">Gedrag: 4 factoren (Kunnen/Doen)</div>
-<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Vaardigheden</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever mist kennis of vaardigheden — deze interventies helpen die te ontwikkelen</div><table class="pt"><tr><td style="width:30%;font-weight:600">Loonkostensubsidie (LKS)</td><td>Compensatie bij verminderde productiviteit</td></tr><tr><td style="font-weight:600">No-riskpolis</td><td>Verzekerd voor ziekteverzuimkosten via UWV</td></tr><tr><td style="font-weight:600">Loonkostenvoordeel (LKV)</td><td>Rijksregeling tegemoetkoming</td></tr><tr><td style="font-weight:600">Loonwaardemeting</td><td>Vaststellen loonwaarde, noodzakelijk voor LKS</td></tr><tr><td style="font-weight:600">Financieel CV (Min. SZW)</td><td>Inzicht welke regelingen werkgever kan inzetten</td></tr><tr><td style="font-weight:600">Instrumentengids</td><td>Overzicht regelingen en instrumenten</td></tr><tr><td style="font-weight:600">Hallo Werk</td><td>Online portaal: kandidaten zoeken, vacatures plaatsen</td></tr><tr><td style="font-weight:600">Werkgeverscheque</td><td>Maandelijkse bijdrage (max 12 maanden)</td></tr><tr><td style="font-weight:600">Leerwerkcheque</td><td>Vergoeding bij jongeren tot 27 in dienst</td></tr></table></div>
-<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Actieplan</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever heeft concrete stappen nodig</div><table class="pt"><tr><td style="width:30%;font-weight:600">Job carving</td><td>Bestaande functie aanpassen aan doelgroep</td></tr><tr><td style="font-weight:600">Functiecreatie</td><td>Nieuwe functie creeren passend bij mogelijkheden</td></tr><tr><td style="font-weight:600">Werkplekscan</td><td>Analyse werkplek op geschiktheid</td></tr><tr><td style="font-weight:600">Arbeidsdeskundig advies</td><td>Advies over voorzieningen op de werkplek</td></tr><tr><td style="font-weight:600">Praktijkleren</td><td>Scholing op de werkvloer (BBL/BOL/certificaten)</td></tr></table></div>
-<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Copingplan</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Wat doet de werkgever bij tegenslag? Concrete afspraken helpen inclusief gedrag volhouden</div><table class="pt"><tr><td style="width:30%;font-weight:600">Jobcoach bij uitval</td><td>Begeleiding op de werkplek bij terugval of verzuim</td></tr><tr><td style="font-weight:600">Geldloket bij schulden</td><td>Doorverwijzing naar financiële hulpverlening bij kandidaat met schuldenproblematiek</td></tr><tr><td style="font-weight:600">Sociale kaart bij gedragsvragen</td><td>Overzicht van hulporganisaties bij sociaal-maatschappelijke problematiek</td></tr><tr><td style="font-weight:600">Taaltools en taaltraining</td><td>Speak-see, AI vertaaloortjes, training op locatie</td></tr><tr><td style="font-weight:600">Werknemerscheque</td><td>Max &#8364;500 vergoeding voor duurzame plaatsing</td></tr><tr><td style="font-weight:600">Beschut werk (WIO)</td><td>Werkplek met veel begeleiding en aanpassingen</td></tr></table></div>
-<div class="card"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Belemmeringen</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever ervaart concrete obstakels</div><table class="pt"><tr><td style="width:30%;font-weight:600">Job carving</td><td>Werk aanpassen aan wat de kandidaat kan</td></tr><tr><td style="font-weight:600">Functiecreatie</td><td>Nieuwe functie ontwerpen</td></tr><tr><td style="font-weight:600">Werkplekscan</td><td>Fysieke en organisatorische aanpassingen</td></tr><tr><td style="font-weight:600">Arbeidsdeskundig advies</td><td>Inzet voorzieningen en hulpmiddelen bepalen</td></tr><tr><td style="font-weight:600">Bemiddeling</td><td>Actieve matching werkgever en kandidaat</td></tr><tr><td style="font-weight:600">Werving via Hallo Werk</td><td>Inclusief werven en selecteren</td></tr></table></div>
+<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Vaardigheden</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever mist kennis of vaardigheden — deze interventies helpen die te ontwikkelen</div><table class="pt"><tr><td style="width:30%;font-weight:600">Loonkostensubsidie (LKS)</td><td>Compensatie bij verminderde productiviteit</td></tr><tr><td style="font-weight:600">No-riskpolis</td><td>Verzekerd voor ziekteverzuimkosten via UWV</td></tr><tr><td style="font-weight:600">Loonkostenvoordeel (LKV)</td><td>Rijksregeling tegemoetkoming</td></tr><tr><td style="font-weight:600">Loonwaardemeting</td><td>Vaststellen loonwaarde, noodzakelijk voor LKS</td></tr><tr><td style="font-weight:600">Financieel CV (Min. SZW)</td><td>Inzicht welke regelingen werkgever kan inzetten</td></tr><tr><td style="font-weight:600">Instrumentengids</td><td>Overzicht regelingen en instrumenten</td></tr><tr><td style="font-weight:600">Hallo Werk</td><td>Online portaal: kandidaten zoeken, vacatures plaatsen</td></tr><tr><td style="font-weight:600">Werkgeverscheque</td><td>Maandelijkse bijdrage (max 12 maanden)</td></tr><tr><td style="font-weight:600">Leerwerkcheque / LLO <span class="prop-link" onclick="openProp('lll')">&#9432; Propositie</span></td><td>Vergoeding bij jongeren tot 27 in dienst / scholing en ontwikkeling</td></tr></table></div>
+<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Actieplan</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever heeft concrete stappen nodig</div><table class="pt"><tr><td style="width:30%;font-weight:600">Job carving <span class="prop-link" onclick="openProp('jobcarving')">&#9432; Propositie</span></td><td>Bestaande functie aanpassen aan doelgroep</td></tr><tr><td style="font-weight:600">Functiecreatie <span class="prop-link" onclick="openProp('functiecreatie')">&#9432; Propositie</span></td><td>Nieuwe functie creeren passend bij mogelijkheden</td></tr><tr><td style="font-weight:600">Werkplekscan</td><td>Analyse werkplek op geschiktheid</td></tr><tr><td style="font-weight:600">Arbeidsdeskundig advies</td><td>Advies over voorzieningen op de werkplek</td></tr><tr><td style="font-weight:600">Praktijkleren</td><td>Scholing op de werkvloer (BBL/BOL/certificaten)</td></tr></table></div>
+<div class="card mb"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Copingplan</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Wat doet de werkgever bij tegenslag? Concrete afspraken helpen inclusief gedrag volhouden</div><table class="pt"><tr><td style="width:30%;font-weight:600">Jobcoach bij uitval</td><td>Begeleiding op de werkplek bij terugval of verzuim</td></tr><tr><td style="font-weight:600">Geldloket bij schulden</td><td>Doorverwijzing naar financiële hulpverlening bij kandidaat met schuldenproblematiek</td></tr><tr><td style="font-weight:600">Sociale kaart bij gedragsvragen</td><td>Overzicht van hulporganisaties bij sociaal-maatschappelijke problematiek</td></tr><tr><td style="font-weight:600">Taaltools en taaltraining <span class="prop-link" onclick="openProp('taal')">&#9432; Propositie</span></td><td>Speak-see, AI vertaaloortjes, training op locatie</td></tr><tr><td style="font-weight:600">Werknemerscheque</td><td>Max &#8364;500 vergoeding voor duurzame plaatsing</td></tr><tr><td style="font-weight:600">Beschut werk (WIO) <span class="prop-link" onclick="openProp('beschut')">&#9432; Propositie</span></td><td>Werkplek met veel begeleiding en aanpassingen</td></tr></table></div>
+<div class="card"><div style="font-size:13px;font-weight:700;color:var(--dark);margin-bottom:4px">Belemmeringen</div><div class="tx" style="color:var(--tm);margin-bottom:6px">Werkgever ervaart concrete obstakels</div><table class="pt"><tr><td style="width:30%;font-weight:600">Job carving <span class="prop-link" onclick="openProp('jobcarving')">&#9432; Propositie</span></td><td>Werk aanpassen aan wat de kandidaat kan</td></tr><tr><td style="font-weight:600">Functiecreatie <span class="prop-link" onclick="openProp('functiecreatie')">&#9432; Propositie</span></td><td>Nieuwe functie ontwerpen</td></tr><tr><td style="font-weight:600">Werkplekscan</td><td>Fysieke en organisatorische aanpassingen</td></tr><tr><td style="font-weight:600">Arbeidsdeskundig advies</td><td>Inzet voorzieningen en hulpmiddelen bepalen</td></tr><tr><td style="font-weight:600">Bemiddeling</td><td>Actieve matching werkgever en kandidaat</td></tr><tr><td style="font-weight:600">Werving via Hallo Werk</td><td>Inclusief werven en selecteren</td></tr></table></div>
 </div>
 <div class="pnl" id="p6">
 <div class="card cen mb2" style="background:linear-gradient(135deg,#fffcf0,#fff)"><div style="font-size:17px;font-weight:700;color:var(--dark)">Van Matchen naar Adviseren</div><div class="ts mt" style="max-width:720px;margin:0 auto">De kern van de werkgeversbenadering is een verschuiving in rol: van bemiddelaar die vacatures vult naar strategisch adviseur die werkgevers helpt inclusie structureel te implementeren. Matching wordt steeds meer datagedreven.</div></div>
@@ -3012,6 +3039,135 @@ function toonSturing(type) {
   if (activeTab) activeTab.classList.add('active');
   if (activePanel) activePanel.classList.add('active');
 }
+</script>
+
+<!-- ===== PROPOSITIE POPUP ===== -->
+<div class="prop-overlay" id="propOverlay" onclick="closePropIfBg(event)">
+  <div class="prop-modal" id="propModal">
+    <div class="prop-modal-hdr">
+      <div class="prop-modal-icon" id="propIcon"></div>
+      <div class="prop-modal-title">
+        <h3 id="propTitle"></h3>
+        <p id="propSubtitle"></p>
+      </div>
+      <button class="prop-modal-close" onclick="closeProp()">&#10005;</button>
+    </div>
+    <div class="prop-modal-body" id="propBody"></div>
+    <div class="prop-modal-footer">
+      <a class="prop-doc-link" id="propDocLink" href="#">&#128196; Volledige propositie</a>
+      <button class="close-btn" onclick="closeProp()">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var proposities = {
+  jobcarving: {
+    title: 'Jobcarving',
+    subtitle: 'Bestaande functie opsplitsen in maatwerkpakket',
+    icon: '',
+    color: '#4472C4',
+    bg: '#eef3fb',
+    samenvatting: 'Jobcarving splitst een bestaande functie op in kleinere, beter afgestemde taken. Taken die iemand niet kan uitvoeren worden elders belegd. Zo ontstaat een functie op maat die aansluit bij wat de kandidaat wél kan.',
+    voor: ['Werkgevers die inclusief willen ondernemen en mensen duurzaam willen plaatsen', 'Organisaties die werkdruk willen verminderen door taken slim te verdelen', 'MKB en grote bedrijven die SROI-verplichtingen willen invullen', 'Gemeente Den Haag als sociaal werkgever'],
+    voordelen: ['Minder werkdruk en ziekteverzuim', 'Moeilijk vervulbare functies toch invullen', 'Gebruik van loonkostensubsidie en no-riskpolis mogelijk', 'Maatschappelijke impact via SROI'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Jobcarving_v1_0.pdf?csf=1&web=1&e=7zv7W7'
+  },
+  functiecreatie: {
+    title: 'Functiecreatie',
+    subtitle: 'Nieuwe functie creëren vanuit procesanalyse',
+    icon: '',
+    color: '#ED7D31',
+    bg: '#fff3ea',
+    samenvatting: 'Functiecreatie richt zich op het slimmer organiseren van bedrijfsprocessen. Eenvoudige en repeterende taken worden samengebracht in een nieuwe, duurzame functie. Vakmensen houden zo meer tijd voor hun kerntaken.',
+    voor: ['Werkgevers die kosten willen besparen door duurdere medewerkers te ontlasten', 'Organisaties die professionals willen laten focussen op kerntaken', 'Bedrijven die een SROI-verplichting hebben of sociaal willen ondernemen', 'MKB en grote bedrijven'],
+    voordelen: ['Efficiënter werken: vakmensen focussen op kerntaken', 'Kostenbesparing door slimmere taakverdeling', 'Nieuwe betaalde functies voor mensen met afstand tot de arbeidsmarkt', 'Minder werkdruk en minder verloop'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Functiecreatie_v1_0.pdf?csf=1&web=1&e=y3wDw3'
+  },
+  beschut: {
+    title: 'Beschut werk',
+    subtitle: 'Veilige werkomgeving met intensieve begeleiding',
+    icon: '',
+    color: '#70AD47',
+    bg: '#eef7e8',
+    samenvatting: 'Beschut werk biedt een veilige en ondersteunende werkomgeving voor mensen die één-op-één begeleiding nodig hebben. Den Haag Werkt biedt dit via 10 werksoorten, en ook via stage, detachering en beschut werk bij een externe werkgever.',
+    voor: ['Kandidaten met een UWV-indicatie beschut werk', 'PRO/VSO-leerlingen die willen doorontwikkelen via stage', 'Werkgevers die gemotiveerde collega\'s zoeken via detachering', 'Externe werkgevers die beschut werk willen bieden'],
+    voordelen: ['Veilige omgeving met één-op-één begeleiding', 'Doorgroeimogelijkheden naar regulier werk', 'Terugkeeroptie naar Den Haag Werkt als stap toch niet past', 'Vier varianten: intern, stage, gedetacheerd, bij werkgever'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Beschut_werk_v1_0.pdf?csf=1&web=1&e=4mEQro'
+  },
+  taal: {
+    title: 'Taalinzet',
+    subtitle: 'Taaltraining en -ondersteuning op de werkplek',
+    icon: '',
+    color: '#FFC000',
+    bg: '#fffbea',
+    samenvatting: 'Taal is een basisvoorwaarde voor duurzame plaatsing. Taalinzet biedt trainingen op de werkplek, klassikale trajecten en technologische oplossingen zoals Speaksee en vertaaloortjes voor kandidaten die de Nederlandse taal niet (voldoende) beheersen.',
+    voor: ['Werkgevers met geplaatste kandidaten die de taal niet machtig zijn', 'Werkgevers die duurzame plaatsingen willen realiseren', 'HR-managers die ondersteuning zoeken bij kwetsbare werknemers'],
+    voordelen: ['Minder uitval door taalbarrière', 'Hogere productiviteit: beter instructies opvolgen', 'Betere teamdynamiek en werkplezier', 'Vier aanpakken: werkvloer, klassikaal, Speaksee, vertaaloortjes'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Taalinzet_v1_0.pdf?csf=1&web=1&e=v0Ro1h'
+  },
+  lll: {
+    title: 'Leven Lang Ontwikkelen',
+    subtitle: 'Structurele leercultuur in de organisatie',
+    icon: '',
+    color: '#4472C4',
+    bg: '#eef3fb',
+    samenvatting: 'Leven Lang Ontwikkelen (LLO) helpt werkgevers structureel te investeren in kennis en vaardigheden van hun medewerkers. Via de Talentensleutel-methodiek, advies over subsidies (zoals SLIM-regeling) en begeleiding bij een leercultuur.',
+    voor: ['Werkgevers die willen investeren in duurzame inzetbaarheid', 'MKB-bedrijven zonder eigen HR-capaciteit voor scholingsbeleid', 'HR-managers die LLO willen implementeren', 'Werkenden en werkzoekenden die hun positie willen versterken'],
+    voordelen: ['Hogere productiviteit en innovatiekracht', 'Minder verloop door meer betrokkenheid', 'Kostenbesparing op werving via interne talentontwikkeling', 'Toegang tot subsidies zoals de SLIM-regeling'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Leven_Lang_Leren_v1_0.pdf?csf=1&web=1&e=GeaUSm'
+  },
+  begeleiding: {
+    title: 'Begeleiding na plaatsing',
+    subtitle: 'Ondersteuning voor werkgever én kandidaat na start',
+    icon: '',
+    color: '#44546A',
+    bg: '#f0f2f5',
+    samenvatting: 'Begeleiding na plaatsing draagt bij aan een stabiele werkrelatie. Via proactieve signalering van uitdagingen, aandacht voor de zes leefgebieden (ZRM) en maatwerkondersteuning wordt uitval voorkomen en de plaatsing duurzaam gemaakt.',
+    voor: ['Werkgevers die mensen met afstand tot de arbeidsmarkt in dienst hebben', 'Werkgevers die duurzame plaatsingen willen realiseren', 'HR-managers en leidinggevenden die ondersteuning zoeken'],
+    voordelen: ['Voorkomen van uitval en vervangingskosten', 'Productiever en gemotiveerder medewerker', 'Tijdige signalering van privé- en werkproblemen', 'Geen volledige HR-overname: werkgever blijft in de lead'],
+    doc: 'https://denhaag.sharepoint.com/:b:/r/sites/AccountmanagerssiteWGD_SZW_WGD/Gedeelde%20documenten/Producten%20en%20diensten%20(instrumenten)/Propositie_Begeleiding_na_plaatsing_v1_0.pdf?csf=1&web=1&e=kUQSJY'
+  }
+};
+
+function openProp(id) {
+  var p = proposities[id];
+  if (!p) return;
+  document.getElementById('propIcon').style.background = p.bg;
+  document.getElementById('propIcon').textContent = p.icon;
+  document.getElementById('propTitle').textContent = p.title;
+  document.getElementById('propSubtitle').textContent = p.subtitle;
+  
+  var body = '<div class="prop-section"><div class="prop-section-label">Wat is het?</div><p>' + p.samenvatting + '</p></div>';
+  
+  body += '<div class="prop-section"><div class="prop-section-label">Voor wie?</div><ul class="prop-bullets">';
+  p.voor.forEach(function(v){ body += '<li>' + v + '</li>'; });
+  body += '</ul></div>';
+  
+  body += '<div class="prop-section"><div class="prop-section-label">Voordelen voor werkgever</div><ul class="prop-bullets">';
+  p.voordelen.forEach(function(v){ body += '<li>' + v + '</li>'; });
+  body += '</ul></div>';
+  
+  document.getElementById('propBody').innerHTML = body;
+  document.getElementById('propDocLink').href = p.doc;
+  document.getElementById('propDocLink').style.color = p.color;
+  document.getElementById('propDocLink').style.borderColor = p.color;
+  document.querySelector('.prop-modal-hdr').style.borderBottomColor = p.color;
+  
+  document.getElementById('propOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProp() {
+  document.getElementById('propOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function closePropIfBg(e) {
+  if (e.target === document.getElementById('propOverlay')) closeProp();
+}
+
+document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeProp(); });
 </script>
 </body>
 </html>
